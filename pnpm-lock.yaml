@@ -9,7 +9,7 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: ^6.4.7
+        specifier: 6.4.7
         version: 6.4.7(rollup@4.62.0)
 
 packages:
