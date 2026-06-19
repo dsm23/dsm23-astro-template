@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      run: ./node_modules/.bin/prettier --check --ignore-unknown {staged_files}
+
+    eslint:
+      run: ./node_modules/.bin/eslint {staged_files}
+      glob:
+        - "*.ts"
+        - "*.js"
+        - "*.astro"
+
+commit-msg:
+  commands:
+    commitlint:
+      run: ./node_modules/.bin/commitlint --edit {1}
