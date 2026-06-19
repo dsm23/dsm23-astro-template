@@ -31,5 +31,8 @@ jobs:
       - name: Node setup
         uses: ./.github/actions/setup
 
+      - name: Lint check
+        run: pnpm run lint
+
       - name: Lint Unused Dependencies
         run: pnpm exec knip
